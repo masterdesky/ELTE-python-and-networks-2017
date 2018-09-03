@@ -1,0 +1,19 @@
+Hálozati alapmennyiségek
+
+N: csucsok száma (nodes)
+	(V: Vertex)
+E: élek száma (edges)
+	(L: links)
+d: fokszám (szomszédok száma; degree of node)
+
+<d>: átlagos fokszám (average node degree)
+	<d> = 2*E/N
+	(EZ FONTOS!!)
+p: élsûrûség
+	élhely betöltési sûrûség
+	edge density
+	connection probability (of edges)
+p = 2E/(N*(N-1)) ~= 2E/(N^2)
+
+
+pN ~= <d>

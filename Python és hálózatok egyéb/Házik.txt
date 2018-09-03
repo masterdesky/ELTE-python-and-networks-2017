@@ -1,0 +1,7 @@
+HF: hatarido: vasarnanap ejfel; holnapon lesz
+
+Honlap:
+http://hal.elte.hu/fij/h/?n=Main.Teaching
+
+1. házi: n darab véletlen szám generálása, átlag, medián, hogyan változnak n
+növelésével? Hova konvergál? (0,5?) (N: log skála)

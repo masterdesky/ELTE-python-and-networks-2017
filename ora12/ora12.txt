@@ -1,0 +1,9 @@
+1. k-clique:
+
+   k darab csúcs mindenki mindenkivel összeközve
+   5-clique lehet része 6 cliquenek és így tovább
+
+   Hiányzó/hibás él/élek:
+   Gráfkomponensek keresése az egészet végigjárva
+
+   Perkoláció: Valszám jegyzet

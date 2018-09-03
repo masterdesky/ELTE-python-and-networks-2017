@@ -1,0 +1,85 @@
+Kisvilág modell
+SWM (Small-World-Modell)
+
+1998 SCIENCE
+Watts, Strogatz
+
+1929 Karinthy: Láncszemek
+Egyik szereplő ismerettségeken keresztül minél több ismerőst kell szereznie
+Ford vezérigazgatójáig kell eljutni.
+Mennyiből lehet akárhová eljutni?
+1920-30: Kb 4-5 lépés
+2010, Facebook: inkább 4 lépés
+
+1967? Stanley Milgram
+Omaha és Boston között személyes ismerettségeken keresztül kell eljutattni csomagot egy adott emberhez.
+Ahhoz kellett mindenkinek küldenie, akiről úgy gondota, hogy minél több köze lehetett Bostonhoz és az adott illetőhöz.
+Ez mérések alapján 5-6 lépésre volt.
+Emiatt Small-World-Problem --> Six degrees of separation
+Ekkor kb. 250 millió volt a lakosság az USA-ban.
+
+
+  |Kis Világ tul. | Magas Clast. | Magas dmax, vagy p(k)^gamma
+ER|     true      |    false     |           false           |
+--------------------------------------------------------------
+SW|     true      |     true     |           false           |
+--------------------------------------------------------------
+SF|     true      |    false     |           true            |
+--------------------------------------------------------------
+
+SMALL WORLD PROBLEM CONTAINS:
+Kis Világ tulajdonság (Small World Property): Network diometer ~ log of # nodes (d ~ log(N))
+Network diameter: - Az összes lehetséges pont-pont távolság közül a legnagyobb: Minimumok maximuma
+                  - Ha izolált pontok vannak, akkor végtelen a távolság definíció szerint (gyakorlatban
+                  csak a legnagyobb komponenst tekintjük
+                  - Ritkább esetben az átlag távolságot szoktuk venni
+
+Magas klaszterezettség (High Clustering)
+
+
+n_step | n_node
+   1      <k>
+   2      <k>^2
+   .
+   .
+   .
+   L      <k>^L ~ N
+
+Ebből ln(L) = <k> ~ ln(N) -> ER-MODEL: d ~ log(N)
+Klaszterezetségi együttható: 1 csúcsra van definiálva
+A hálózatét, ezeknek az átlaga az összes csúcsra
+Azon háromszögek száma, amikben benne van, osztva azon háromszögek számával, amikben ő benne lehetne
+vagy osztva a szomszád párjainak számával.
+
+Egyszerűsített definíció: Mekkora P-vel lesz szomszéd két szomszédja egy pontnak.
+
+ER hálózatban:
+<k> = 2E/N
+C = p = 2E/(N*(N-1)) ~ 2E/(N^2) = <k>/N
+
+
+WATTS AND STROGATZ: SMALL-WORLD-PROBLEM;
+1D periodikus rács:
+Kör mentén N darab pont. Legyen a "k" fokszám rögzített, ami páros. Ekkor mindkét irányba egy csúcs
+k/2 szomszédjával van összekötve.
+c0 = 3/(4*(3/2)) Szomszédok között levő él osztva az összes lehetségessel
+
+q kis valószínűséggel kiválasztanak egy csúcsot és annak az egyik élének másik végpontját átrakták máshová
+q mértékben változtatja meg az C együtthatókat.
+Logaritmussal mennek az élek
+L(q)/L(0)
+C(q)/C(0)
+
+  I |_____________C(q)/C(0)
+    |   \         \
+    |   |         |
+    |   |         |
+    |   |         |
+    |   \__________\_______
+    |------------------------- q
+
+Az I(q) és a C(q)/C(0) által bezárt rész a kis világ (ahol a legszélesebb)
+
+1973, Mark Granovetter: Weak Links
+Magas klaszterezetségű pontok közöt gyenge kapocslatok, amiken áramolhat az információ
+Ez felfogható 1998-as SW-nek is.

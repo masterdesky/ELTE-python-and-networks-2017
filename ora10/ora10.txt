@@ -1,0 +1,67 @@
+SF  m   t
+ER  N   E
+    m+t m*r
+
+    N E     N = m+t
+            E = m*t -> t = E/m -> N = m + E/m
+                           N*m = m^2 + E
+                           m^2 + (-N)*m + E = 0             Ez egy másodfokú
+                           m_1 = (N + sqrt(N^2 - 4E))/2
+                           m_2 = (N - sqrt(N^2 - 4E))/2     EZ LESZ A JÓ
+
+                           m = m_2 = N/2 - sqrt((N/2)^2 - E)
+
+
+1. order of nodes
+1a. random order of nodes
+1b. descending order by degrees
+
+node2deg = {_:len(node2neiSet[_]) for _ in node2neiSet.keys()}
+//minden kulcshoz hozzárendeli a fokszámát ez a dict
+
+nodeList = list(node2neiSet.keys())     EZ ER HÁLÓZATRA NEM JÓ!!!!!!!
+                                        (Mert lehet a gráfban fa is)
+nodeList_ord = sorted(nodeList,key = node2deg.get)
+//A kulcsok között csak azok vannak bent, akiknek van fokszámuk
+//Így ütközni fog a másikkal (nodeList), amiben van NONE értékű is
+//Hisz nincsen élük
+
+
+node2neiSet_all -> complete graph
+nodeList_ord -> order in which nodes will be inserted
+nodeNum2sMax -> size of largest component vs # of inserted nodes
+node2neiSet -# current graph during the node/link insertion process
+n2c[n] (node to cluster) -> the cluster of a given node 'n'
+c2nL[c] (cluster to node list) -> the list of nodes of a give cluster 'c'
+
+ER, SF hálózat.
+2féle dolog történhet:
+1. véletlenszerűen dobáljuk be az éleket
+2. eredeti fokszám szerint meghatározott módon
+
+- Amikor berakunk egy csúcsot, akkor az alapból benne van egy klaszterben az első élével,
+de hozzákapcsolódhat egy másikhoz is a második élével.
+- Amikor egy ilyen élt berakunk, akkor végrehajtjuk a klaszterfrissítési ellenprzést
+(azonos-e a két végén)
+- Ha összeolvasztás történik (klaszter), megnézzük, hogy a keletkezett klaszter
+nagyobb-e, mint az eddigi legnagyobb.
+
+
+lépések:
+
+# loop over the list of nodes in the sorted order
+for nowNode in nodeList_ord:
+    #ide kell berakni a kis intermezzo-t (insertNode
+    #try to insert each link of this node
+    for otherNode in node2neiSet_all[nowNode]:
+        #a sima node2neiSet az az a hálózat amit építünk épp fel
+        #insert link to other node only if it's already in the network
+        if otherNode in node2neiSet:
+
+
+kis intermezzo (insertNode):
+node2neiSet[nowNode] = set() //Ez lesz majd a csúcs berakás
+
+Az SF a támadásra érzékenyebb
+hibára kb ugyanannyira
+

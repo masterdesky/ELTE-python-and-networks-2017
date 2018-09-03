@@ -1,0 +1,32 @@
+﻿1999 Physica A: Barabás; A-L; Albert Réka; stb.
+
+I. t = t_0 = 0: (időpillanatban): there are m_0 nodes
+    m_0 = m = 2 connected (every new node arrives with the degree of 2)
+II. t -> t+1: - 1 new node connects to 'm' old nodes
+              - each dd nodes selected with probability
+                to its degree at 't'
+              - Adott csúcs fokszáma az időnek 1/2-es hatványával arányban
+                fog növekedni. -> h_i(t) ~ t^(1/2)
+              - p(k) ~ k^(-3)                    | Hosszú
+              - d/dt (k_i(t)) ~ k_i(t)           | Idő
+              - d/dt (k_i(t)) = A * k_i(t)       | Után
+                Azokra a csúcsokra összegezzünk, akik bent vannak már (szum i_old)
+              - m = A * mt * 2 vagy m = A * m(t-1) * 2
+              - Ebből: A = 1/(2t)
+              - d/dt (k_i(t)) = 1/(2t) * k_i(t)
+              - d(k_i) / k_i = 1/2 * dt/t
+              - ln(k_i(t)) in [t_i;t] = 1/2 * ln(t) in [t_i;t]
+              - ln(k_i(t) / m) = 1/2 * ln(t / t_i)
+              - ln(k_i(t)) = ln((t / t_i)^(1/2) * m)
+              - k_i(t) = (t / t_i)^(1/2) * m
+
+Kérdés: Prob(k_i > k) = ?
+Ebből: p(k) = -d/dk (Prob(k_i > k))
+
+Prob(k_i > k) = Prob(((t / t_i)^(1/2) * m) > k) =
+              = Prob((m/k * (t_i)^(1/2)) > ((t_i)^(1/2))) =
+              = Prob(((m/k)^2 * t) > (t_i))
+Prob(k_i > k) ~ (m/k)^2
+p(k) ~ (-1) * d/dk (m/k)^2
+p(k) ~ k^(-3)
+HF: Legnagyobb fokszám mérése

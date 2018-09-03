@@ -1,0 +1,7 @@
+h(x): # of times we see x in a list/set/etc
+
+p.d.f. p(x) = h(x) / sum(x) (h(x))	probability density function
+
+c.d.f. cdf(x)=sum(x=-inf->x-1) (p(x)): mi a valószínûsége, hogy egy random elem kisebb, mint x				commulative density function
+
+c.c.d.f. ccdf(x) = 1-cdf(x): mi a valószínûsége annak, hogy random elem xnél nagyobb

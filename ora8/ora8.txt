@@ -1,0 +1,39 @@
+Pattern
+
+Regular expression:
+
+A pattern separates all possible stringsinto 2 groups: One that contain the strings, matches the pattern,
+                                                       and one, that do not
+
+==== Building patterns: =====
+- atom = character
+- char class: - user-def
+              - built-in
+              - positioning(?) -> fura osztaly
+- counters
+- parentheses: - grouping
+               - memo
+
+
+Positioning:
+
+^ : eleje (begin)
+$ : vége (end)
+\b : határa (word boundary): \w -> \W vagy \W -> \w
+\B : komplementere (not-boundary)
+
+^\s*
+\s*$ : a vlgln van-e 0 vagy több space
+^\s*$ : nulla vagy több ezekből: new line-t adja ki
+
+alma\b : alma szót követi egy szóhatár
+alma citrom : ez OK
+almafa : ez NOT OK
+
+2010-es évek: 2010 : \w
+              -    : \W
+              es   : \w
+              " "  : \W
+              évek : \w
+
+^\s*\# : kizárólagosan komment sort írja ki

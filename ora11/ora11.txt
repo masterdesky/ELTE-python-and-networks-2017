@@ -1,0 +1,62 @@
+==========
+Clustering
+==========
+
+Kiinduló adattípus :
+1. N items with coordinates
+2. N items with pairwise similaritxy values
+                        (disimilarity, distance)
+
+            1st 2nd 3rd      ...        Mth
+1st gene
+2nd
+3rd
+.
+.
+.
+i'th                       X (j'th exp)
+
+agglamenative ierarchical clustering
+iteration:
+1. t -> t+1 merge to most similar items         del key2values[key]
+2. compute new similarity values
+
+Similarity
+value
+    ^
+  0.|
+    |
+    |   ___
+    |  |   |
+    |  -   -       -
+    | | | | |     | |
+  1.| o o o o o o o o o
+     -------------------->
+
+Minimum-, maximum., average linkage
+
+
+-> group-group distance: similarity
+
+If we know all point
+
+
+THEN
+    the distance of groups A ad B can be:
+
+d_AB - min d_ij -> elongated branching clusters
+
+       max      -> compact rounded clusters
+
+
+=========
+SUBRUTINE
+
+"Sherlock Holmes"
+
+c2c2n = {}
+
+1. inFile
+
+node -> cluster: n2c = range(len(nodelist))
+cluster -> NodeList: c2nL = {_:[_]} for _ in {}

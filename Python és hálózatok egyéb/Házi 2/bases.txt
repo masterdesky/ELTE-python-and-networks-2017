@@ -1,0 +1,12 @@
+A T G C
+
+
+ADJACENTES:
+-----------
+AT	TA
+AG	GA
+AC	CA
+TG	GT
+TC	CT
+GC	CG
+-----------
